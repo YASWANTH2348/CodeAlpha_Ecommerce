@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fbfcfe">
+    <meta name="description" content="Discover thoughtful clothing, homeware, and accessories at E-Shop.">
+    <title>E-Shop — Thoughtful things for everyday living</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="announcement">A little more joy in your everyday. Free shipping on orders over ₹5,000.</div>
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="E-Shop home">E-Shop<span>.</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop all</a>
+        <a href="#shop" data-filter-link="Clothing">Clothing</a>
+        <a href="#shop" data-filter-link="Home">Home</a>
+        <a href="#shop" data-filter-link="Accessories">Accessories</a>
+        <a href="#shop" data-filter-link="Snacks">Snacks</a>
+        <a href="#shop" data-filter-link="Groceries">Groceries</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button settings-button" id="settings-button" aria-label="Store settings">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-1.6 2.8-.2-.1a1.7 1.7 0 0 0-1.9.3l-.1.1h-3.2l-.1-.2a1.7 1.7 0 0 0-1.5-1.1 1.7 1.7 0 0 0-1.5 1.1l-.1.2H6.4l-.1-.1a1.7 1.7 0 0 0-1.9-.3l-.2.1-1.6-2.8.1-.1A1.7 1.7 0 0 0 3 15l-.1-.2v-3.2l.2-.1a1.7 1.7 0 0 0 1.1-1.5A1.7 1.7 0 0 0 3.1 8.5L3 8.4l1.6-2.8.2.1a1.7 1.7 0 0 0 1.9-.3l.1-.1H10l.1.2a1.7 1.7 0 0 0 1.5 1.1 1.7 1.7 0 0 0 1.5-1.1l.1-.2h3.2l.1.1a1.7 1.7 0 0 0 1.9.3l.2-.1 1.6 2.8-.1.1a1.7 1.7 0 0 0-.3 1.9l.1.2v3.2l-.2.1a1.7 1.7 0 0 0-1.1 1.5Z"></path></svg>
+          <span class="settings-label">Settings</span>
+        </button>
+        <button class="icon-button account-button" id="account-button" aria-label="Sign in">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.7-3.1 3.2-5 7-5s6.3 1.9 7 5"></path></svg>
+          <span id="account-label">Account</span>
+        </button>
+        <button class="icon-button cart-button" id="cart-button" aria-label="Open shopping bag">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg>
+          <span>Bag</span><span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="top-search-wrap">
+      <label class="product-search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.5 4.5"></path></svg>
+        <span class="visually-hidden">Search products</span>
+        <input id="product-search" type="search" placeholder="Search products, categories..." autocomplete="off">
+        <button type="button" id="clear-search" aria-label="Clear search" hidden>×</button>
+      </label>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-line"></span> A slower kind of shopping</span>
+          <h1>Good things,<br><em>well chosen.</em></h1>
+          <p>Considered pieces for the spaces you make, the people you love, and all the in-between moments.</p>
+          <a class="button button-dark" href="#shop">Explore the collection <span aria-hidden="true">↗</span></a>
+          <div class="hero-note"><span class="note-stars">✳</span> Thoughtfully made. Made to last.</div>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="hero-carousel" id="hero-carousel" role="region" aria-label="Featured collection" aria-roledescription="carousel">
+            <div class="hero-carousel-track" id="hero-carousel-track" aria-live="off">
+              <div class="hero-slide" data-title="THE EVERYDAY EDIT" data-edition="NO. 01 — SLOW LIVING">
+                <img class="hero-image" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1500&q=90" alt="A calm, light-filled living room">
+              </div>
+              <div class="hero-slide" data-title="THE CLOTHING EDIT" data-edition="NO. 02 — EASY ESSENTIALS" aria-hidden="true">
+                <img class="hero-image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1500&q=90" alt="A simple cotton tee in a bright studio">
+              </div>
+              <div class="hero-slide" data-title="THE ACCESSORY EDIT" data-edition="NO. 03 — LITTLE DETAILS" aria-hidden="true">
+                <img class="hero-image" src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1500&q=90" alt="A pair of minimal everyday shoes">
+              </div>
+            </div>
+            <button class="carousel-arrow carousel-previous" type="button" id="carousel-previous" aria-label="Show previous slide">‹</button>
+            <button class="carousel-arrow carousel-next" type="button" id="carousel-next" aria-label="Show next slide">›</button>
+            <div class="carousel-dots" role="group" aria-label="Choose a featured slide">
+              <button type="button" data-carousel-slide="0" aria-label="Show slide 1" aria-current="true"></button>
+              <button type="button" data-carousel-slide="1" aria-label="Show slide 2"></button>
+              <button type="button" data-carousel-slide="2" aria-label="Show slide 3"></button>
+            </div>
+          </div>
+          <div class="hero-image-label"><span id="carousel-title">THE EVERYDAY EDIT</span><span id="carousel-edition">NO. 01 — SLOW LIVING</span></div>
+          <div class="hero-stamp"><span>MADE FOR</span><strong>every<br>day</strong><span>WITH CARE · 2025</span></div>
+        </div>
+      </section>
+
+      <section class="benefits" aria-label="Our values">
+        <div><span class="benefit-icon">✳</span><span>Considered design, always</span></div>
+        <div><span class="benefit-icon">↗</span><span>Small makers, big heart</span></div>
+        <div><span class="benefit-icon">♡</span><span>Made for the long run</span></div>
+      </section>
+
+      <section class="category-section" aria-labelledby="category-title">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">A good place to start</span>
+            <h2 id="category-title">Shop by <em>category.</em></h2>
+          </div>
+          <p>Find something lovely for your wardrobe, your home, or wherever the day takes you.</p>
+        </div>
+        <div class="category-grid">
+          <a class="category-card" href="#shop" data-filter-link="Clothing">
+            <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=85" alt="">
+            <span class="category-card-copy"><span data-category-count="Clothing">Clothing</span><strong>Clothing</strong><span>Explore collection <b aria-hidden="true">↗</b></span></span>
+          </a>
+          <a class="category-card" href="#shop" data-filter-link="Home">
+            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=85" alt="">
+            <span class="category-card-copy"><span data-category-count="Home">Home</span><strong>Home & living</strong><span>Explore collection <b aria-hidden="true">↗</b></span></span>
+          </a>
+          <a class="category-card" href="#shop" data-filter-link="Accessories">
+            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=85" alt="">
+            <span class="category-card-copy"><span data-category-count="Accessories">Accessories</span><strong>Accessories</strong><span>Explore collection <b aria-hidden="true">↗</b></span></span>
+          </a>
+          <a class="category-card" href="#shop" data-filter-link="Snacks">
+            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=85" alt="">
+            <span class="category-card-copy"><span data-category-count="Snacks">Snacks</span><strong>Snacks</strong><span>Explore collection <b aria-hidden="true">↗</b></span></span>
+          </a>
+          <a class="category-card" href="#shop" data-filter-link="Groceries">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=85" alt="">
+            <span class="category-card-copy"><span data-category-count="Groceries">Groceries</span><strong>Groceries</strong><span>Explore collection <b aria-hidden="true">↗</b></span></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="shop-section" id="shop">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">A few things we love</span>
+            <h2>Find your <em>everyday.</em></h2>
+          </div>
+          <p>Useful, beautiful things that feel like they belong. Take a look around.</p>
+        </div>
+        <div class="shop-controls">
+          <button class="filter-toggle" id="filter-toggle" type="button" aria-expanded="false" aria-controls="filter-panel">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h9m4 0h3M4 17h3m4 0h9"></path><circle cx="15" cy="7" r="2"></circle><circle cx="9" cy="17" r="2"></circle></svg>
+            Filters <span id="filter-count" hidden></span>
+          </button>
+        </div>
+        <div class="filter-panel" id="filter-panel" hidden>
+          <label class="filter-field"><span>Category</span>
+            <select id="category-filter">
+              <option value="All">All categories</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Home">Home</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Snacks">Snacks</option>
+              <option value="Groceries">Groceries</option>
+            </select>
+          </label>
+          <label class="filter-field"><span>Price</span>
+            <select id="price-filter">
+              <option value="all">Any price</option>
+              <option value="under-5000">Under ₹5,000</option>
+              <option value="5000-10000">₹5,000 – ₹10,000</option>
+              <option value="over-10000">Over ₹10,000</option>
+            </select>
+          </label>
+          <label class="filter-field"><span>Availability</span>
+            <select id="availability-filter">
+              <option value="all">All products</option>
+              <option value="in-stock">In stock only</option>
+            </select>
+          </label>
+          <button class="clear-filters" id="clear-filters" type="button">Clear filters</button>
+        </div>
+        <div class="shop-toolbar">
+          <div class="filter-list" role="group" aria-label="Filter products by category">
+            <button class="filter-chip active" data-filter="All">Everything <span id="all-count">08</span></button>
+            <button class="filter-chip" data-filter="Clothing">Clothing</button>
+            <button class="filter-chip" data-filter="Home">Home</button>
+            <button class="filter-chip" data-filter="Accessories">Accessories</button>
+            <button class="filter-chip" data-filter="Snacks">Snacks</button>
+            <button class="filter-chip" data-filter="Groceries">Groceries</button>
+          </div>
+          <label class="sort-control">Sort by
+            <select id="sort-select" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="price-high">Price: high to low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </label>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>No pieces in this collection just yet.</div>
+      </section>
+
+      <section class="story-section">
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Quiet, sunlit living room in natural tones">
+          <span class="image-caption">A HOME THAT FEELS LIKE YOU</span>
+        </div>
+        <div class="story-copy">
+          <span class="eyebrow"><span class="eyebrow-line"></span> The E-Shop point of view</span>
+          <h2>Less, but<br><em>more meaningful.</em></h2>
+          <p>We believe the best things aren't just nice to look at. They're made with care, chosen with intention, and loved for a long, long time.</p>
+          <a href="#shop" class="text-link">A little more about us <span aria-hidden="true">↗</span></a>
+          <div class="story-mark">a<span>.</span></div>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div><span class="eyebrow">A good thing in your inbox</span><h2>Stay a little <em>longer.</em></h2></div>
+        <form id="newsletter-form" class="newsletter-form">
+          <label class="visually-hidden" for="newsletter-email">Your email address</label>
+          <input id="newsletter-email" type="email" placeholder="Your email address" required>
+          <button type="submit" aria-label="Subscribe to newsletter">Join us <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="newsletter-message" id="newsletter-message" aria-live="polite">Notes on new things, good people, and living well. No noise.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#">E-Shop<span>.</span></a>
+      <p>Thoughtful things for everyday living.</p>
+      <div class="footer-meta"><span>Made with intention, in India.</span><span>© E-Shop 2026</span></div>
+    </footer>
+
+    <div class="overlay" id="overlay" hidden></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+      <div class="drawer-header"><div><span class="eyebrow">A few good things</span><h2>Your bag <span id="drawer-count"></span></h2></div><button class="close-button" data-close aria-label="Close shopping bag">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-footer">
+        <div class="shipping-note" id="shipping-note"></div>
+        <div class="cart-subtotal"><span>Subtotal</span><strong id="cart-subtotal">₹0</strong></div>
+        <p>Shipping and taxes calculated at checkout.</p>
+        <button class="button button-dark checkout-button" id="checkout-button">Continue to checkout <span aria-hidden="true">↗</span></button>
+      </div>
+    </aside>
+
+    <dialog class="detail-dialog" id="detail-dialog" aria-label="Product details">
+      <button class="close-button modal-close" data-close aria-label="Close product details">×</button>
+      <div id="detail-content"></div>
+    </dialog>
+
+    <dialog class="account-dialog" id="account-dialog" aria-label="Your account">
+      <button class="close-button modal-close" data-close aria-label="Close account">×</button>
+      <div class="account-content" id="account-content"></div>
+    </dialog>
+
+    <dialog class="checkout-dialog" id="checkout-dialog" aria-label="Checkout">
+      <button class="close-button modal-close" data-close aria-label="Close checkout">×</button>
+      <div id="checkout-content"></div>
+    </dialog>
+
+    <dialog class="settings-dialog" id="settings-dialog" aria-label="Store settings">
+      <button class="close-button modal-close" data-close aria-label="Close settings">×</button>
+      <div class="settings-content">
+        <span class="eyebrow">Your browsing preferences</span>
+        <h2>Store settings</h2>
+        <p>Make the product list feel right for you.</p>
+        <label class="form-field"><span>Product layout</span>
+          <select id="product-density">
+            <option value="comfortable">Comfortable</option>
+            <option value="compact">Compact</option>
+          </select>
+        </label>
+        <label class="settings-checkbox"><input type="checkbox" id="show-categories"><span>Show product categories</span></label>
+        <button class="button button-dark form-submit" type="button" id="reset-settings">Reset preferences</button>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
